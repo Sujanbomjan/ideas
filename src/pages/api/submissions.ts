@@ -1,11 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import connectToDatabase from "../../utils/db";
+import connectToDatabase from "@/utils/db";
 import Submission from "@/app/models/Submission";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, DELETE, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   await connectToDatabase();
 
   if (req.method === "POST") {

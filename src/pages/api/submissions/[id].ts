@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import connectToDatabase from "../../../utils/db";
+import connectToDatabase from "@/utils/db";
 import Submission from "@/app/models/Submission";
 
 export default async function handler(
