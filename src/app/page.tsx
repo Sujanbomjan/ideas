@@ -1,6 +1,4 @@
-"use client
-"
-import Link from "next/link";
+"use client"
 import SubmitForm from "./components/submit";
 
 export default function Home() {
